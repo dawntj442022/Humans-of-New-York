@@ -2,23 +2,27 @@ const express = require("express");
 const router = express.Router();
 
 const Human = require("../models/humans");
+// const apiController = require("./apiController");
+
+// router.get("/api", "/index", apiController.index);
+// router.get("/api/:id", "/index", apiController.show);
+// router.get("/index");
+
+router.use((req, res, next) => {
+  console.log("session", req.session);
+
+  if (req.session.loggedIn) {
+    next();
+  } else {
+    res.redirect("/user/login");
+  }
+});
 
 // Index
 router.get("/", (req, res) => {
   Human.find({}, (error, allHumans) => {
     res.render("humans/Index", {
       humans: allHumans,
-    });
-  });
-});
-
-/// Index
-router.get("/", (req, res) => {
-  // Get all of the logs from the DB
-  Log.find({}, (error, allLogs) => {
-    // Send that data to a template
-    res.render("logs/Index", {
-      logs: allLogs,
     });
   });
 });
@@ -34,7 +38,7 @@ router.put("/:id", (req, res) => {
     if (err) {
       return res.send({ error: err });
     }
-    // console.human("updatedHuman", updatedHuman);
+    console.log("updatedHuman", updatedHuman);
     res.redirect(`/humans/${req.params.id}`);
   });
 });

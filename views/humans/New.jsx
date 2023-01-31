@@ -11,7 +11,9 @@ class New extends React.Component {
           <br />
           Entry: <input type="textarea" name="entry" />
           <br />
-          Ship is Broken: <input type="checkbox" name="postToPublic " />
+          Post to Public: <input type="checkbox" name="postToPublic" />
+          <br />
+          <input type="date" name="" value="Create Date" />
           <br />
           <input type="submit" name="" value="Create Blog" />
           <br />

@@ -12,7 +12,7 @@ class Edit extends React.Component {
           <br />
           Entry: <input type="textarea" name="entry" defaultValue={entry} />
           <br />
-          Post to the Public:
+          Post to Public:
           {postToPublic ? (
             <input type="checkbox" name="postToPublic " defaultChecked />
           ) : (

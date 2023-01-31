@@ -1,24 +1,18 @@
 require("dotenv").config();
 
-/**
- * Requirements
- */
 const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
 
-// /include the method-override package place this where you instructor places it
 const methodOverride = require("method-override");
 
-/**
- * Configuration
- */
 const PORT = 3000;
 
 /**
  * Controllers
  */
 const humanController = require("./controllers/humanController");
+const userController = require("./controllers/user/userController");
 
 //... and then farther down the file
 mongoose.connect(process.env.MONGO_URI, {
@@ -33,6 +27,9 @@ mongoose.connection.once("open", () => {
 /**
  * Middleware
  */
+const setupMiddleware = require("./middleware/setupMiddleware");
+
+setupMiddleware(app);
 
 //...
 //after app has been defined
@@ -60,12 +57,12 @@ app.engine("jsx", require("jsx-view-engine").createEngine());
  * Controllers
  */
 app.use("/humans", humanController);
-
+app.use("/user", userController);
 /**
  * Routes
  */
 // Redirect
-// This will redirect the user to the logs page!
+// This will redirect the user to the humans page!
 app.get("/", (req, res) => {
   res.redirect("/humans/");
 });

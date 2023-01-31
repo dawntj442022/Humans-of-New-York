@@ -1,4 +1,5 @@
 const React = require("react");
+const Moment = require("moment");
 
 class Show extends React.Component {
   render() {
@@ -10,10 +11,11 @@ class Show extends React.Component {
         <nav>
           <a href="/humans">Back</a>
         </nav>
-        The {this.props.human.title} is {this.props.human.entry} {" - "}
+        {this.props.human.title}. {this.props.human.entry} {" - "}
         {this.props.human.postToPublic
-          ? `It is posted to the public`
-          : `It is not posted to the public`}
+          ? `Posted to the public`
+          : `Not posted to the public`}
+        {Moment(human.timestamp).format("MMMM Do YYYY, h:mm:ss a")}
       </div>
     );
   }
