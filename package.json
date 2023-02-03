@@ -165,6 +165,9 @@
     "start": "node server.js",
     "dev": "nodemon"
   },
+  "engines": {
+    "node": "19.6.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dawntj442022/Humans-of-New-York.git"

@@ -2,11 +2,6 @@ const express = require("express");
 const router = express.Router();
 
 const Human = require("../models/humans");
-// const apiController = require("./apiController");
-
-// router.get("/api", "/index", apiController.index);
-// router.get("/api/:id", "/index", apiController.show);
-// router.get("/index");
 
 router.use((req, res, next) => {
   console.log("session", req.session);
