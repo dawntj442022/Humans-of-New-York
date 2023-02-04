@@ -42,10 +42,6 @@ class New extends React.Component {
               className="table-cell text-blue-500 text-center"
             />
             <br />
-            <img
-              src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fc8.alamy.com%2Fcomp%2FRME1ER%2Fsubway-in-new-york-city-photo-from-the-80s-RME1ER.jpg&imgrefurl=https%3A%2F%2Fwww.alamy.com%2Fsubway-in-new-york-city-photo-from-the-80s-image236336431.html&tbnid=s-YVYdqNjIbxjM&vet=10CAUQMyhqahcKEwigvIWX_vr8AhUAAAAAHQAAAAAQCQ..i&docid=XUxBBeeVuBtCxM&w=1300&h=1110&q=photos%20of%20new%20york%20city%20subway%20in%20the%201980%27s&ved=0CAUQMyhqahcKEwigvIWX_vr8AhUAAAAAHQAAAAAQCQ"
-              alt=""
-            ></img>
           </form>
         </div>
         <br />
