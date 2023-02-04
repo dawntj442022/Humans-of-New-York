@@ -15,9 +15,17 @@ class Index extends React.Component {
     return (
       <DefaultLayout>
         <div>
-          <h1 className="	font-weight: 800;">Humans of New York</h1>
+          <h1 className="	font-extrabold text-center text-3xl">
+            Humans of New York
+          </h1>
           <nav>
-            <a href="/humans/new">Create a New Blog</a>
+            <a href="/humans/new">
+              {" "}
+              <button className="text-blue-500 font-bold">
+                Create a New Blog{" "}
+              </button>
+            </a>
+            <br />
             <a href="/user/Logout">
               <button className="bg-green-700">Logout</button>
             </a>
