@@ -86,15 +86,12 @@ class Index extends React.Component {
                       className="text-blue-500"
                     />
                   </form>
+                  <br />
                 </li>
               );
             })}
           </ul>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
         <br />
         <br />
         <br />
