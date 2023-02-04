@@ -57,9 +57,14 @@ class Index extends React.Component {
             {this.props.humans.map((human, i) => {
               return (
                 <li key={i}>
-                  <a href={`/humans/${human.id}`}> {human.title} </a>
+                  <a href={`/humans/${human.id}`} className="text-blue-500">
+                    {" "}
+                    {human.title}{" "}
+                  </a>
+                  <br />
                   {human.entry}
                   {" - "}
+                  <br />
                   {human.postToPublic
                     ? `Posted to the Public`
                     : `Not Posted to the Public`}
