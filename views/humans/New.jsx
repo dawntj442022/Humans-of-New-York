@@ -2,9 +2,15 @@ const React = require("react");
 const DefaultLayout = require("../Layout/Default");
 
 class New extends React.Component {
-  render(_src = "file:///C:/Users/sunsh/OneDrive/Desktop/subway2.html") {
+  render() {
     return (
       <DefaultLayout>
+        <img
+          src="C:/Users/sunsh/OneDrive/Desktop/subway2.html"
+          alt="Stickman"
+          width="24"
+          height="39"
+        ></img>
         <div>
           <h1 className="font-extrabold text-blue-500 text-center text-3xl underline big-clip-text">
             Humans of New York
