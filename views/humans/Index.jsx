@@ -27,7 +27,7 @@ class Index extends React.Component {
             </a>
             <br />
             <a href="/user/Logout">
-              <button className="bg-green-700">Logout</button>
+              <button className="bg-gray-900">Logout</button>
             </a>
           </nav>
           <ul>
