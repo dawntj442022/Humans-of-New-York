@@ -50,6 +50,10 @@ class Index extends React.Component {
                 Logout
               </button>
             </a>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-lg font-medium">Card Title</h3>
+              <p class="text-gray-700 mt-2">Some card content goes here.</p>
+            </div>
             <br />
             <br />
           </nav>
