@@ -2,9 +2,7 @@ const React = require("react");
 const DefaultLayout = require("../Layout/Default");
 
 class New extends React.Component {
-  render(
-    _src_ = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4Eomr4ieorbuArVe_r9aKaN7-gXbGk13bJGySKf-GWIk166_ZN-IQuuhwRV10z8o-ne8&usqp=CAU"
-  ) {
+  render(_src = "file:///C:/Users/sunsh/OneDrive/Desktop/subway2.html") {
     return (
       <DefaultLayout>
         <div>
