@@ -21,16 +21,18 @@ class Index extends React.Component {
           <nav>
             <a href="/humans/new">
               {" "}
-              <button className="text-blue-500 font-bold underline">
+              <button className="text-blue-500 font-bold underline text-left">
                 Create a New Blog{" "}
               </button>
             </a>
             <br />
             <a href="/user/Logout">
-              <button className="text-blue-500 font-bold text-left underline">
+              <button className="text-blue-500 font-bold underline  ">
                 Logout
               </button>
             </a>
+            <br />
+            <br />
           </nav>
           <ul>
             {this.props.humans.map((human, i) => {
