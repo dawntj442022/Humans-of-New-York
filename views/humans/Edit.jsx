@@ -6,22 +6,20 @@ class Edit extends React.Component {
 
     return (
       <>
-        <DefaultLayout>
-          <h1>{title} Blog Post</h1>
-          <form action={`/humans/${_id}?_method=PUT`} method="POST">
-            Title: <input type="text" name="title" defaultValue={title} />
-            <br />
-            Entry: <input type="textarea" name="entry" defaultValue={entry} />
-            <br />
-            Post to Public:
-            {postToPublic ? (
-              <input type="checkbox" name="postToPublic " defaultChecked />
-            ) : (
-              <input type="checkbox" name="postToPublic " />
-            )}
-            <input type="submit" value="Submit Changes" />
-          </form>
-        </DefaultLayout>
+        <h1>{title} Blog Post</h1>
+        <form action={`/humans/${_id}?_method=PUT`} method="POST">
+          Title: <input type="text" name="title" defaultValue={title} />
+          <br />
+          Entry: <input type="textarea" name="entry" defaultValue={entry} />
+          <br />
+          Post to Public:
+          {postToPublic ? (
+            <input type="checkbox" name="postToPublic " defaultChecked />
+          ) : (
+            <input type="checkbox" name="postToPublic " />
+          )}
+          <input type="submit" value="Submit Changes" />
+        </form>
       </>
     );
   }

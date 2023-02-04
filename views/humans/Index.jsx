@@ -57,21 +57,29 @@ class Index extends React.Component {
             {this.props.humans.map((human, i) => {
               return (
                 <li key={i}>
-                  {Moment(human.timestamp).format("MMMM Do YYYY, h:mm:ss a")}
                   <a href={`/humans/${human.id}`}> {human.title} </a>
                   {human.entry}
                   {" - "}
                   {human.postToPublic
                     ? `Posted to the Public`
                     : `Not Posted to the Public`}
+                  {Moment(human.timestamp).format("MMMM Do YYYY, h:mm:ss a")}
                   <form
                     action={`/humans/${human._id}?_method=DELETE`}
                     method="POST"
                   >
-                    <input type="submit" value="DELETE" />
+                    <input
+                      type="submit"
+                      value="DELETE"
+                      className="text-blue-500"
+                    />
                   </form>
                   <form action={`/humans/${human._id}/edit`} method="GET">
-                    <input type="submit" value="UPDATE" />
+                    <input
+                      type="submit"
+                      value="UPDATE"
+                      className="text-blue-500"
+                    />
                   </form>
                 </li>
               );
