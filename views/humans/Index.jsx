@@ -68,6 +68,7 @@ class Index extends React.Component {
                   {human.postToPublic
                     ? `Posted to the Public`
                     : `Not Posted to the Public`}
+                  <br />
                   {Moment(human.timestamp).format("MMMM Do YYYY, h:mm:ss a")}
                   <form
                     action={`/humans/${human._id}?_method=DELETE`}
