@@ -2,13 +2,9 @@ const React = require("react");
 const DefaultLayout = require("../Layout/Default");
 
 class New extends React.Component {
-  render() {
-    <img
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4Eomr4ieorbuArVe_r9aKaN7-gXbGk13bJGySKf-GWIk166_ZN-IQuuhwRV10z8o-ne8&usqp=CAU"
-      alt=""
-      width="500"
-      height="600"
-    ></img>;
+  render(
+    src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4Eomr4ieorbuArVe_r9aKaN7-gXbGk13bJGySKf-GWIk166_ZN-IQuuhwRV10z8o-ne8&usqp=CAU"
+  ) {
     return (
       <DefaultLayout>
         <div>
