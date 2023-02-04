@@ -10,9 +10,16 @@ class New extends React.Component {
             Humans of New York
           </h1>
           <br />
+          <br />
           <h3 className="font-extrabold text-blue-500 text-center text-xl">
             Create New Post
           </h3>
+          <img
+            src="img_girl.jpg"
+            alt="https://i.ytimg.com/vi/7_smuiL3piw/maxresdefault.jpg"
+            width="500"
+            height="600"
+          ></img>
           {/* NOTE: action will be the route, method will be the HTTP verb */}
           <form action="/humans" method="POST">
             Title: <input className="text-center" type="text" name="title" />
