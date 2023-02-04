@@ -56,60 +56,48 @@ class Index extends React.Component {
           <div class="bg-white p-6 rounded-lg shadow-md">
             <h3 class="text-lg font-medium">Card Title</h3>
             <p class="text-gray-700 mt-2">Some card content goes here.</p>
-            <ul>
-              {this.props.humans.map((human, i) => {
-                return (
-                  <li key={i}>
-                    <a href={`/humans/${human.id}`}> {human.title} </a>
-                    {human.entry}
-                    {" - "}
-                    {human.postToPublic
-                      ? `Posted to the Public`
-                      : `Not Posted to the Public`}
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-lg font-medium">Card Title</h3>
+              <p class="text-gray-700 mt-2">Some card content goes here.</p>
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-medium">Card Title</h3>
+                <p class="text-gray-700 mt-2">Some card content goes here.</p>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                  <h3 class="text-lg font-medium">Card Title</h3>
+                  <p class="text-gray-700 mt-2">Some card content goes here.</p>
+                  <ul>
+                    {this.props.humans.map((human, i) => {
+                      return (
+                        <li key={i}>
+                          <a href={`/humans/${human.id}`}> {human.title} </a>
+                          {human.entry}
+                          {" - "}
+                          {human.postToPublic
+                            ? `Posted to the Public`
+                            : `Not Posted to the Public`}
 
-                    <form
-                      action={`/humans/${human._id}?_method=DELETE`}
-                      method="POST"
-                    >
-                      <input type="submit" value="DELETE" />
-                    </form>
-                    <form action={`/humans/${human._id}/edit`} method="GET">
-                      <input type="submit" value="UPDATE" />
-                    </form>
-                    {Moment(human.timestamp).format("MMMM Do YYYY, h:mm:ss a")}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <h3 class="text-lg font-medium">Card Title</h3>
-            <p class="text-gray-700 mt-2">Some card content goes here.</p>
-            <ul>
-              {this.props.humans.map((human, i) => {
-                return (
-                  <li key={i}>
-                    <a href={`/humans/${human.id}`}> {human.title} </a>
-                    {human.entry}
-                    {" - "}
-                    {human.postToPublic
-                      ? `Posted to the Public`
-                      : `Not Posted to the Public`}
-
-                    <form
-                      action={`/humans/${human._id}?_method=DELETE`}
-                      method="POST"
-                    >
-                      <input type="submit" value="DELETE" />
-                    </form>
-                    <form action={`/humans/${human._id}/edit`} method="GET">
-                      <input type="submit" value="UPDATE" />
-                    </form>
-                    {Moment(human.timestamp).format("MMMM Do YYYY, h:mm:ss a")}
-                  </li>
-                );
-              })}
-            </ul>
+                          <form
+                            action={`/humans/${human._id}?_method=DELETE`}
+                            method="POST"
+                          >
+                            <input type="submit" value="DELETE" />
+                          </form>
+                          <form
+                            action={`/humans/${human._id}/edit`}
+                            method="GET"
+                          >
+                            <input type="submit" value="UPDATE" />
+                          </form>
+                          {Moment(human.timestamp).format(
+                            "MMMM Do YYYY, h:mm:ss a"
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </DefaultLayout>
