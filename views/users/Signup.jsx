@@ -4,7 +4,8 @@ class Signup extends React.Component {
   render() {
     return (
       <div>
-        <h1>Signup</h1>
+        <h1> Humans of New York</h1>
+        <h3>Signup</h3>
 
         <form action="/user/signup" method="POST">
           Name: <input type="text" defaultValue="" name="username" required />
