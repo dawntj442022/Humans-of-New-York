@@ -79,6 +79,9 @@ class Index extends React.Component {
             })}
           </ul>
         </div>
+        <footer class="bg-gray-900 p-6 text-white">
+          <p>Copyright © 2023. All rights reserved.</p>
+        </footer>
       </DefaultLayout>
     );
   }
