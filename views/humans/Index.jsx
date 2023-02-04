@@ -21,13 +21,13 @@ class Index extends React.Component {
           <nav>
             <a href="/humans/new">
               {" "}
-              <button className="text-blue-500 font-bold">
+              <button className="text-blue-500 font-bold underline">
                 Create a New Blog{" "}
               </button>
             </a>
             <br />
             <a href="/user/Logout">
-              <button className="text-blue-500 font-bold text-left">
+              <button className="text-blue-500 font-bold text-left underline">
                 Logout
               </button>
             </a>
