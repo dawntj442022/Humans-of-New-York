@@ -17,7 +17,7 @@ class New extends React.Component {
           <form action="/humans" method="POST">
             Title:{" "}
             <input
-              className="table-cell text-blue-500 text-center"
+              className=" flex text-blue-500 text-center"
               type="text"
               name="title"
             />
@@ -26,7 +26,7 @@ class New extends React.Component {
             <input
               type="textarea"
               name="entry"
-              className="table-cell text-blue-500 text-center"
+              className="flex text-blue-500 text-center"
             />
             <br />
             Post to Public:{" "}
