@@ -5,12 +5,6 @@ class New extends React.Component {
   render() {
     return (
       <DefaultLayout>
-        <img
-          src="C:/Users/sunsh/OneDrive/Desktop/subway2.html"
-          alt="Stickman"
-          width="24"
-          height="39"
-        ></img>
         <div>
           <h1 className="font-extrabold text-blue-500 text-center text-3xl underline big-clip-text">
             Humans of New York
@@ -49,6 +43,10 @@ class New extends React.Component {
             />
             <br />
           </form>
+          <img
+            src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fc8.alamy.com%2Fcomp%2FRME1ER%2Fsubway-in-new-york-city-photo-from-the-80s-RME1ER.jpg&imgrefurl=https%3A%2F%2Fwww.alamy.com%2Fsubway-in-new-york-city-photo-from-the-80s-image236336431.html&tbnid=s-YVYdqNjIbxjM&vet=10CAUQMyhqahcKEwigvIWX_vr8AhUAAAAAHQAAAAAQCQ..i&docid=XUxBBeeVuBtCxM&w=1300&h=1110&q=photos%20of%20new%20york%20city%20subway%20in%20the%201980%27s&ved=0CAUQMyhqahcKEwigvIWX_vr8AhUAAAAAHQAAAAAQCQ"
+            alt=""
+          ></img>
         </div>
         <br />
         <br />
