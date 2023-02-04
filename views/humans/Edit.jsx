@@ -6,7 +6,7 @@ class Edit extends React.Component {
 
     return (
       <>
-        <h1>{title} Blog Post</h1>
+        <h1>{title} Humans of New York: Blog Post</h1>
         <form action={`/humans/${_id}?_method=PUT`} method="POST">
           Title: <input type="text" name="title" defaultValue={title} />
           <br />

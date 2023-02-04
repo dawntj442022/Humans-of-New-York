@@ -70,13 +70,10 @@ router.delete("/:id", (req, res) => {
   });
 });
 
-//put this above your Show route
-// New
 router.get("/new", (req, res) => {
   res.render("humans/New");
 });
 
-// Show - Route
 router.get("/:id", (req, res) => {
   const { id } = req.params;
 

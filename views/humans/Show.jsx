@@ -7,7 +7,7 @@ class Show extends React.Component {
 
     return (
       <div>
-        <h1>Blog Post</h1>
+        <h1>Humans of New York</h1>
         <nav>
           <a href="/humans">Back</a>
         </nav>

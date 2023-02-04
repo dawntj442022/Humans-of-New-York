@@ -1,7 +1,6 @@
 const jwt = require("jsonwebtoken");
 
 async function basicAuth(req, res, next) {
-  // Parse the header with the token. Verify the jwt. pass the _id into the locals
   const { authorization } = req.headers;
   const bearerToken = authorization?.split(" ")[1];
 
