@@ -15,7 +15,7 @@ class Index extends React.Component {
     return (
       <DefaultLayout>
         <div>
-          <h1 className="	font-extrabold text-blue-500 text-center text-3xl underline">
+          <h1 className="	font-extrabold text-blue-500 text-center text-3xl underline bg-clip-text">
             Humans of New York
           </h1>
           <nav>

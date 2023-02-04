@@ -6,7 +6,7 @@ class New extends React.Component {
     return (
       <DefaultLayout>
         <div>
-          <h1 className="font-extrabold text-blue-500 text-center text-3xl underline">
+          <h1 className="font-extrabold text-blue-500 text-center text-3xl underline big-clip-text">
             Humans of New York
           </h1>
           <br />
@@ -33,7 +33,6 @@ class New extends React.Component {
               className="text-center"
             />
             <br />
-            <br />
             <input
               type="submit"
               name=""
@@ -43,6 +42,7 @@ class New extends React.Component {
             <br />
           </form>
         </div>
+        <br />
         <br />
         <br />
         <br />
