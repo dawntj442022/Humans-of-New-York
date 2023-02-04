@@ -7,8 +7,9 @@ class Edit extends React.Component {
     return (
       <DefaultLayout>
         <h1 className="	font-extrabold text-blue-500 text-center text-3xl underline bg-clip-text">
-          {title} Humans of New York: Blog Post
+          Humans of New York: Blog Post
         </h1>
+        {title}
         <form action={`/humans/${_id}?_method=PUT`} method="POST">
           Title: <input type="text" name="title" defaultValue={title} />
           <br />
