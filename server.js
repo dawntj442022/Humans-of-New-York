@@ -25,12 +25,6 @@ const setupMiddleware = require("./middleware/setupMiddleware");
 setupMiddleware(app);
 app.use(methodOverride("_method"));
 
-// function logger(req, res, next) {
-//   console.info(req.path);
-//   next();
-// }
-// app.use(logger);
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

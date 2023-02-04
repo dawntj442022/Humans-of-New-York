@@ -15,7 +15,7 @@ class New extends React.Component {
             Create New Post
           </h3>
 
-          {/* NOTE: action will be the route, method will be the HTTP verb */}
+          {}
           <form action="/humans" method="POST">
             Title: <input className="text-center" type="text" name="title" />
             <br />

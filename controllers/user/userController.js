@@ -16,7 +16,6 @@ router.post("/signup", async (req, res) => {
   const { username, password } = req.body;
 
   try {
-    // hash the password that we recieve
     const hashedPassword = await bcrypt.hash(
       password,
       await bcrypt.genSalt(10)
@@ -36,9 +35,7 @@ router.post("/signup", async (req, res) => {
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
   try {
-    // Find the user by their username
     const foundUser = await User.findOne({ username });
-    // Compare the sent password with the hashed one
     const result = await bcrypt.compare(password, foundUser.password);
 
     if (result) {
