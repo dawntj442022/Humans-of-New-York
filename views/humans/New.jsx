@@ -17,9 +17,9 @@ class New extends React.Component {
           <form action="/humans" method="POST">
             Title:{" "}
             <input
+              className="table-cell text-blue-500 text-center"
               type="text"
               name="title"
-              className="table-cell text-blue-500 text-center"
             />
             <br />
             Entry:{" "}
@@ -68,7 +68,11 @@ class New extends React.Component {
         <br />
         <br />
         <br />
-
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <footer class="bg-gray-900 p-6 text-white">
           <p>Copyright © 2023. All rights reserved.</p>
         </footer>
