@@ -57,13 +57,13 @@ class Index extends React.Component {
             {this.props.humans.map((human, i) => {
               return (
                 <li key={i}>
+                  {Moment(human.timestamp).format("MMMM Do YYYY, h:mm:ss a")}
                   <a href={`/humans/${human.id}`}> {human.title} </a>
                   {human.entry}
                   {" - "}
                   {human.postToPublic
                     ? `Posted to the Public`
                     : `Not Posted to the Public`}
-
                   <form
                     action={`/humans/${human._id}?_method=DELETE`}
                     method="POST"
@@ -73,7 +73,6 @@ class Index extends React.Component {
                   <form action={`/humans/${human._id}/edit`} method="GET">
                     <input type="submit" value="UPDATE" />
                   </form>
-                  {Moment(human.timestamp).format("MMMM Do YYYY, h:mm:ss a")}
                 </li>
               );
             })}
@@ -89,7 +88,13 @@ class Index extends React.Component {
         <br />
         <br />
         <br />
-
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <footer class="bg-gray-900 p-6 text-white">
           <p>Copyright © 2023. All rights reserved.</p>
         </footer>
