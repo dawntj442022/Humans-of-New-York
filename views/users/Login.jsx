@@ -4,7 +4,8 @@ class Login extends React.Component {
   render() {
     return (
       <div>
-        <h1>Login</h1>
+        <h1> Humans of New York</h1>
+        <h3>Login</h3>
         <a href="/user/signup">
           <h3>Signup</h3>
         </a>
