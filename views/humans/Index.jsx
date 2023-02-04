@@ -19,6 +19,25 @@ class Index extends React.Component {
             Humans of New York
           </h1>
           <nav>
+            <nav class="bg-gray-800 p-6">
+              <ul class="flex justify-between items-center">
+                <li>
+                  <a class="text-white hover:text-gray-500" href="#">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a class="text-white hover:text-gray-500" href="#">
+                    Resources
+                  </a>
+                </li>
+                <li>
+                  <a class="text-white hover:text-gray-500" href="#">
+                    About Us
+                  </a>
+                </li>
+              </ul>
+            </nav>
             <a href="/humans/new">
               {" "}
               <button className="text-blue-500 font-bold underline text-left">
