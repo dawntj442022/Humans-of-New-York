@@ -15,33 +15,24 @@ class New extends React.Component {
           </h3>
           {/* NOTE: action will be the route, method will be the HTTP verb */}
           <form action="/humans" method="POST">
-            Title:{" "}
-            <input
-              className=" flex text-blue-500 text-center"
-              type="text"
-              name="title"
-            />
+            Title: <input className="text-center" type="text" name="title" />
             <br />
             Entry:{" "}
-            <input
-              type="textarea"
-              name="entry"
-              className="flex text-blue-500 text-center"
-            />
+            <input type="textarea" name="entry" className="text-center" />
             <br />
             Post to Public:{" "}
             <input
               type="checkbox"
               name="postToPublic"
-              className=" text-blue-500 text-center"
+              className="text-center"
             />
-            <br />
             <input
               type="date"
               name=""
               value="Create Date"
-              className=" text-blue-500 text-center"
+              className="text-center"
             />
+            <br />
             <br />
             <input
               type="submit"
