@@ -12,86 +12,105 @@ class Index extends React.Component {
   render() {
     const { humans } = this.props;
 
+    const backgroundImageStyle = {
+      backgroundImage: `url('https://img.andrewprokos.com/NEW-YORK-CITY-NIGHT-PANORAMA-BLACK-WHITE-2745-1200PX.jpg')`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      height: "100%",
+      width: "100%",
+    };
+
+    const containerStyle = {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      height: "100vh",
+      flexDirection: "column",
+      color: "#fff",
+    };
+
     return (
       <DefaultLayout>
-        <div>
-          <h1 className="	font-extrabold text-blue-500 text-center text-3xl underline bg-clip-text">
-            Humans of New York
-          </h1>
-          <nav>
-            <nav class="bg-gray-800 p-6">
-              <ul class="flex justify-between items-center">
-                <li>
-                  <a class="text-white hover:text-gray-500" href="#">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a class="text-white hover:text-gray-500" href="#">
-                    Resources
-                  </a>
-                </li>
-                <li>
-                  <a class="text-white hover:text-gray-500" href="#">
-                    About Us
-                  </a>
-                </li>
-              </ul>
+        <div style={backgroundImageStyle}>
+          <div style={containerStyle}>
+            <h1 className="	font-extrabold text-blue-500 text-center text-3xl underline bg-clip-text">
+              Humans of New York
+            </h1>
+            <nav>
+              <nav class="bg-gray-800 p-6">
+                <ul class="flex justify-between items-center">
+                  <li>
+                    <a class="text-white hover:text-gray-500" href="#">
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a class="text-white hover:text-gray-500" href="#">
+                      Resources
+                    </a>
+                  </li>
+                  <li>
+                    <a class="text-white hover:text-gray-500" href="#">
+                      About Us
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <a href="/humans/new">
+                {" "}
+                <button className="text-blue-500 font-bold underline text-left">
+                  Create a New Blog{" "}
+                </button>
+              </a>
+              <br />
+              <a href="/user/Logout">
+                <button className="text-blue-500 font-bold underline  ">
+                  Logout
+                </button>
+              </a>
+              <br />
+              <br />
             </nav>
-            <a href="/humans/new">
-              {" "}
-              <button className="text-blue-500 font-bold underline text-left">
-                Create a New Blog{" "}
-              </button>
-            </a>
-            <br />
-            <a href="/user/Logout">
-              <button className="text-blue-500 font-bold underline  ">
-                Logout
-              </button>
-            </a>
-            <br />
-            <br />
-          </nav>
-          <ul>
-            {this.props.humans.map((human, i) => {
-              return (
-                <li key={i}>
-                  <a href={`/humans/${human.id}`} className="text-blue-500">
-                    {" "}
-                    {human.title}{" "}
-                  </a>
-                  <br />
-                  {human.entry}
-                  {" - "}
-                  <br />
-                  {human.postToPublic
-                    ? `Posted to the Public`
-                    : `Not Posted to the Public`}
-                  <br />
-                  {Moment(human.timestamp).format("MMMM Do YYYY, h:mm:ss a")}
-                  <form
-                    action={`/humans/${human._id}?_method=DELETE`}
-                    method="POST"
-                  >
-                    <input
-                      type="submit"
-                      value="DELETE"
-                      className="text-blue-500"
-                    />
-                  </form>
-                  <form action={`/humans/${human._id}/edit`} method="GET">
-                    <input
-                      type="submit"
-                      value="UPDATE"
-                      className="text-blue-500"
-                    />
-                  </form>
-                  <br />
-                </li>
-              );
-            })}
-          </ul>
+            <ul>
+              {this.props.humans.map((human, i) => {
+                return (
+                  <li key={i}>
+                    <a href={`/humans/${human.id}`} className="text-blue-500">
+                      {" "}
+                      {human.title}{" "}
+                    </a>
+                    <br />
+                    {human.entry}
+                    {" - "}
+                    <br />
+                    {human.postToPublic
+                      ? `Posted to the Public`
+                      : `Not Posted to the Public`}
+                    <br />
+                    {Moment(human.timestamp).format("MMMM Do YYYY, h:mm:ss a")}
+                    <form
+                      action={`/humans/${human._id}?_method=DELETE`}
+                      method="POST"
+                    >
+                      <input
+                        type="submit"
+                        value="DELETE"
+                        className="text-blue-500"
+                      />
+                    </form>
+                    <form action={`/humans/${human._id}/edit`} method="GET">
+                      <input
+                        type="submit"
+                        value="UPDATE"
+                        className="text-blue-500"
+                      />
+                    </form>
+                    <br />
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
         <br />
         <br />
